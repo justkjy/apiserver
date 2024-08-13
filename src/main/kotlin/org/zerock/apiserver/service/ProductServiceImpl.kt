@@ -73,7 +73,7 @@ class ProductServiceImpl (
     override fun get(pno: Long): ProductDTO {
         val result : Optional<Product> = productRepository.findById(pno)
 
-        val product : Product = result.orElse(Product());
+        val product : Product = result.orElse(Product())
 
         logger().info("get--------------\n $product-----------------------------------")
         return entityToDTO(product)
@@ -82,7 +82,7 @@ class ProductServiceImpl (
     override fun modify(productDTO : ProductDTO) {
         val result = productRepository.findById(productDTO.pno!!)
 
-        var product = result.orElse(Product())
+        val product = result.orElse(Product())
 
         // 기본 정보 등록
         product.pname = productDTO.pname ?:  ""

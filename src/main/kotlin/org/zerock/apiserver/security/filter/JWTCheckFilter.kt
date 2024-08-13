@@ -80,7 +80,7 @@ class JWTCheckFilter(
             logger.info("$memberDTO")
             logger.info("${memberDTO.authorities}")
 
-            val authenticationToken : UsernamePasswordAuthenticationToken
+            val authenticationToken
             = UsernamePasswordAuthenticationToken(memberDTO, pw, memberDTO.authorities)
 
 
