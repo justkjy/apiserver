@@ -73,7 +73,7 @@ class CustomFileUtil(
                     Thumbnails.of(savePath.toFile())
                         .outputFormat("jpg")
                         .size(200, 200)
-                        .toFile(thumbnailPath.toFile());
+                        .toFile(thumbnailPath.toFile())
                 }
                 uploadNames.add(saveName)
             } catch(e: IOException){

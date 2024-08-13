@@ -83,12 +83,12 @@ class ProductController(
         val oldProductDTO = productService.get(pno)
 
         // 3차 새롭게 추가된 파일은 아래 변수에 저장하고 upload 저장 폴더에 새롭게 추가된 파일을 저장한다.
-        var files:List<MultipartFile> = productDTO.files
+        val files:List<MultipartFile> = productDTO.files
         val currentUploadFileNames:List<String> = fileUtil.saveFiles(files) ?: kotlin.run{ listOf()}
 
         // 4차 계속 유지 되고 있는 파일
         // 기존에 있던 파일 획득, 주의!! 사용자가 삭제한 파일은 아래 productDTO에 없음
-        var uploadFileNames = productDTO.uploadFileNames
+        val uploadFileNames = productDTO.uploadFileNames
 
         // 5차 3차에서 획득한 새롭게 추가된 파일을 4차에서 생성된 uploadFileName에 추가한다.
         if(currentUploadFileNames.isNotEmpty()){

@@ -56,13 +56,13 @@ class JWTUtil {
                     throw CustomJWTException("ExpiredJwt")
                 }    // Expired JWT Token
                 is JwtException -> { //--
-                    throw CustomJWTException("JWTError");
+                    throw CustomJWTException("JWTError")
                 }
                 is IllegalArgumentException -> {
                     throw CustomJWTException("MalFormed")
                 }   // JWT claims string is empty
                 else -> { //--
-                    throw CustomJWTException("Error");
+                    throw CustomJWTException("Error")
                 }
             }
         }
