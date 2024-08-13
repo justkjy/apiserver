@@ -28,21 +28,6 @@ class CustomFileUtil(
 
     lateinit var uploadPath: String
 
-    init{
-//        logger().info("File uploadPath")
-//
-//
-//        val tempFolder = File(propertyValue)
-//
-//        if(!tempFolder.exists()){
-//            tempFolder.mkdirs()
-//        }
-//
-//        uploadPath = tempFolder.absolutePath
-//
-//        logger().info("====================Upload path: $uploadPath========================")
-
-    }
 
     @PostConstruct
     fun init() {

@@ -4,14 +4,12 @@ import com.google.gson.Gson
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
-import org.aspectj.weaver.tools.cache.SimpleCacheFactory.path
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.filter.OncePerRequestFilter
 import org.zerock.apiserver.domain.dto.MemberDTO
 import org.zerock.apiserver.logger
 import org.zerock.apiserver.util.JWTUtil
-import java.util.Objects
 
 // api가 들어왔을때 필터를 확인한다.
 class JWTCheckFilter(

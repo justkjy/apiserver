@@ -8,7 +8,6 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.zerock.apiserver.domain.dto.MemberDTO
 import org.zerock.apiserver.logger
 import org.zerock.apiserver.util.JWTUtil
-import java.io.PrintWriter
 
 // password와 id 맞으면 아래 클레스 실행
 // CustomSecurityConfig > SecurityFilterChain > config.successHandler(APILoginSuccessHandler(jwtUtil)) 에 지정

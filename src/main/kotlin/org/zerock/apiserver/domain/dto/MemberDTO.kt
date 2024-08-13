@@ -2,7 +2,6 @@ package org.zerock.apiserver.domain.dto
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.User
-import java.util.Objects
 import java.util.stream.Collectors
 
 data class MemberDTO (

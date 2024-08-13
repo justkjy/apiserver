@@ -5,7 +5,6 @@ import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
 import org.springframework.security.web.authentication.AuthenticationFailureHandler
 import org.zerock.apiserver.logger
-import javax.naming.AuthenticationException
 
 class APILoginFailHandler : AuthenticationFailureHandler {
 
