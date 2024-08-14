@@ -34,7 +34,9 @@ class CustomSecurityConfig(
         logger().info("------------------------security config----------------")
 
         return http
-            .cors{}
+            .cors{
+                corsConfigurationSource()
+            }
             .sessionManagement { sessionConfig ->
                 sessionConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             }
@@ -67,7 +69,7 @@ class CustomSecurityConfig(
 
         // 허용할 URL들
         //configuration.allowedOrigins = listOf("http://localhost:3000")
-        configuration.allowedOrigins = listOf("*")
+        configuration.allowedOriginPatterns = listOf("*")
         // 허용할 Method들
         configuration.allowedMethods = listOf("HEAD", "POST", "GET", "DELETE", "PUT", "OPTIONS")
         // 허용할 Header들
